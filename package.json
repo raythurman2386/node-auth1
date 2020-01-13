@@ -1,0 +1,33 @@
+{
+  "name": "node-auth1",
+  "version": "1.0.0",
+  "description": "## Topics",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r esm index.js",
+    "server": "nodemon -r esm index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raythurman2386/node-auth1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raythurman2386/node-auth1/issues"
+  },
+  "homepage": "https://github.com/raythurman2386/node-auth1#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "knex": "^0.20.7",
+    "morgan": "^1.9.1",
+    "sqlite3": "^4.1.1"
+  }
+}
