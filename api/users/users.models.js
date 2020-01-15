@@ -30,7 +30,7 @@ const findById = (id) => {
     .first('id', 'username');
 }
 
-module.exports = {
+export default {
   find,
   findBy,
   add,
