@@ -1,11 +1,10 @@
 import express from 'express';
+import router from './users/users.router';
 
 const server = express();
 server.use(express.json());
 
-server.use('/', (req, res, next) => {
-  return res.json({ message: 'Server is working!' })
-})
+server.use('/api', router);
 
 server.use((req, res, next) => {
   return res.status(400).json({ message: 'That route does not exist' })
