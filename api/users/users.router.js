@@ -43,4 +43,22 @@ router
     }
   })
 
+  .get('/logout', async (req, res, next) => {
+    try {
+      if (req.session) {
+        req.session.destroy(err => {
+          if (err) {
+            return res.json({ message: 'We had an issue logging you out' })
+          } else {
+            return res.status(201).json({ message: 'Logout Successful' })
+          }
+        })
+      } else {
+        return res.status(200).json({ message: 'You have logged out' })
+      }
+    } catch (error) {
+      next(error)
+    }
+  })
+
 export default router;
