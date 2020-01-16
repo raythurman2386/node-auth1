@@ -1,8 +1,11 @@
 import express from 'express';
+import session from 'express-session';
 import router from './users/users.router';
+import sessionConfig from './session/sessionConfig';
 
 const server = express();
 server.use(express.json());
+server.use(session(sessionConfig));
 
 server.use('/api', router);
 
