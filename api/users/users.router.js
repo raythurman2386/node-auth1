@@ -24,6 +24,7 @@ router
       const checkPassword = await bcrypt.compare(password, user.password);
 
       if (user && checkPassword) {
+        req.session.user = user;
         return res.status(200).json({ message: `Welcome ${username}!` })
       } else {
         return res.status(401).json({ message: 'Invalid Credentials' })
