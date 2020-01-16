@@ -2,7 +2,7 @@ const sessionConfig = {
   name: 'something catchy',
   secret: 'do not set here',
   cookie: {
-    maxAge: 1000 * 300,
+    maxAge: 1 * 24 * 60 * 60 * 1000,
     secure: false, // Needs to be true in production!!!!!!
     httpOnly: true // Should always be set to true
   },
